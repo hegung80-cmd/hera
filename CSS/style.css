@@ -1,0 +1,271 @@
+.best-seller {
+  text-align: center;
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.best-seller .section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.category-tabs a {
+  color: #666;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.category-tabs a.active {
+  color: #000;
+  border-bottom: 2px solid #000;
+  padding-bottom: 3px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.product p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #222;
+}
+
+body {
+  background-color: pink;
+}
+/* FACE / SKIN CARE Section */
+.split-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 100px 5%;
+  gap: 40px;
+}
+
+.half {
+  flex: 1;
+  min-width: 400px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.section-title.left {
+  text-align: left;
+}
+
+.section-title.right {
+  text-align: right;
+}
+
+.face-content img,
+.skincare-content img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.product-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.product {
+  width: 180px;
+  text-align: center;
+  
+}
+
+.product img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.product p {
+  font-size: 13px;
+  color: #222;
+  margin-top: 8px;
+}
+
+
+/* 반응형 */
+@media (max-width: 900px) {
+  .split-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-title.left,
+  .section-title.right {
+    text-align: center;
+  }
+}
+
+.face-section {
+  position: relative; /* 박스 위치 기준 */
+  padding-bottom: 250px; /* 박스 공간 확보 */
+}
+
+.white-box {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 350px;
+  width: 80%;
+  height: 420px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  z-index: 1; /* ✅ 박스를 product보다 뒤로 */
+}
+
+.product {
+  position: relative;
+  z-index: 2; /* ✅ 박스를 덮도록 위로 올림 */
+  
+}
+.product1 {
+  position: relative;
+  z-index: 2; /* ✅ 박스를 덮도록 위로 올림 */
+  top:-500px
+}
+
+.instagram-section {
+  text-align: center;
+  background-color: #fff;
+  padding: 80px 0;
+}
+
+.insta-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.insta-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* ✅ 반응형으로 꽉 채우기 */
+  gap: 10px;
+  width: 100%;          /* ✅ 전체 폭 사용 */
+  margin: 0 auto 40px;
+}
+
+.insta-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.insta-gallery img:hover {
+  transform: scale(1.05);
+}
+
+.more-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 40px;
+  font-size: 100%;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.more-btn:hover {
+  background-color: #333;
+}
+.brand-story-container {
+  position: relative;
+  width: 100%; /* 이미지 100% 채우기 */
+  display: inline-block;
+}
+
+.brand-story-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.brand-story-text {
+  position: absolute;
+  left: 5%;          /* 왼쪽 중앙 */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000;       /* 검정색 */
+  font-size: 1.8rem; /* 중간 크기 */
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.footer {
+  background-color: #f7f7f7;
+  padding: 30px 0;
+  text-align: center;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.footer-links {
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  color: #555;
+  margin: 0 5px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-icons {
+  margin-bottom: 15px;
+}
+
+.footer-icons a {
+  color: #000;
+  font-size: 1.4rem;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: #999;
+}
+
+.footer-info {
+  color: #777;
+  font-size: 0.85rem;
+}
+
+.footer-info .time {
+  display: block;
+  margin-top: 5px;
+  color: #aaa;
+}

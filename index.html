@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HERA</title>
+ 
+<link rel="stylesheet" href="css/style.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      color: #111;
+    }
+
+    /* 헤더 */
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 20px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .header-icons {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    .search-bar {
+      flex: 1;
+      text-align: center;
+    }
+
+    .search-bar input {
+      width: 300px;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 20px;
+      background-color: #222;
+      color: #fff;
+    }
+
+    /* 내비게이션 */
+    nav {
+      background-color: #111;
+      color: #fff;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ccc;
+    }
+
+    /* 히어로 배너 */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 550px;
+      background: url('img/메인1.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      color: #fff;
+      padding-left: 100px;
+    }
+
+    .hero-content {
+      max-width: 400px;
+    }
+
+    .hero-content h2 {
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 8px;
+      border-left: 3px solid #fff;
+      padding-left: 8px;
+    }
+
+    .hero-content h1 {
+      font-size: 42px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    /* 반응형 */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+      .search-bar input {
+        width: 80%;
+      }
+      nav {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .hero {
+        height: 400px;
+        padding-left: 40px;
+      }
+      .hero-content h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+  <div class="header-icons">
+    <img src="img/돋보기.png" alt="검색" width="20">
+    <input type="text" placeholder="무엇을 찾고 계십니까?" />
+  </div>
+  <h1>HERA</h1>
+  <div class="header-icons">
+    <img src="img/지도'.png" alt="위치" width="20">
+    <img src="img/사람.png" alt="마이페이지" width="20">
+  </div>
+</header>
+
+  <nav>
+    <a href="#">헤라 스토리</a>
+    <a href="#">메이크업</a>
+    <a href="#">스킨케어</a>
+    <a href="#">프래그런스</a>
+    <a href="#">기프트</a>
+    <a href="#">#HERA</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2></h2>
+      <h1></h1>
+    </div>
+  </section>
+  <!-- BEST SELLER SECTION -->
+<section class="best-seller">
+  <h2 class="section-title">BEST SELLER</h2>
+  <div class="category-tabs">
+    <a href="#" class="active">ALL</a>
+    <a href="#">MAKEUP</a>
+    <a href="#">SKINCARE</a>
+  </div>
+
+  <div class="product-grid">
+    <div class="product">
+      <img src="img/쿠션1.png" alt="블랙 쿠션 파운데이션">
+      <p>블랙 쿠션 파운데이션 SPF34/PA++</p>
+    </div>
+    <div class="product">
+      <img src="img/쿠션2.png" alt="리플렉션 쿠션">
+      <p>리플렉션 스킨 글로우 쿠션 파운데이션</p>
+    </div>
+    <div class="product">
+      <img src="img/립1.png" alt="누드 글로스">
+      <p>센슈얼 누드 글로스</p>
+    </div>
+    <div class="product">
+      <img src="img/립2.png" alt="누드 밤">
+      <p>센슈얼 누드 밤</p>
+    </div>
+  </div>
+</section>
+<!-- FACE & SKIN CARE SECTION -->
+<section class="split-section">
+  <div class="half face-section">
+    <h2 class="section-title left">FACE</h2>
+    <div class="face-content">
+      <img src="img/매인2.png" alt="Face Main Image">
+      
+      <div class="product-row">
+        <div class="product">
+          <img src="img/크림1.png" alt="부스팅 베이스 유브이 프로텍터" class="up">
+          <p>부스팅 베이스 유브이 프로텍터 SPF 15</p>
+        </div>
+        <div class="product">
+          <img src="img/크림2.png" alt="커버링 베이스 유브이 프로텍터" class="up">
+          <p>커버링 베이스 유브이 프로텍터 SPF 50+ PA++++</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="half skincare-section">
+    <h2 class="section-title right">SKIN CARE</h2>
+    <div class="skincare-content">
+      <img src="img/스킨1.png" alt="Skincare Main Image">
+      <!-- <div class="white-box"></div> -->
+      <div class="product-row">
+        <div class="product">
+          <img src="img/스킨2.png" alt="NEW & ISSUE">
+          <p>NEW & ISSUE</p>
+        </div>
+        <div class="product">
+          <img src="img/스킨3.png" alt="HERA'S PICK">
+          <p>HERA'S PICK</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="instagram-section">
+  <h2 class="insta-title">@HERABEAUTY_OFFICIAL</h2>
+  <div class="insta-gallery">
+    <img src="img/매인3.png" alt="HERA Instagram Image 1">
+    
+  </div>
+  <button class="more-btn">MORE</button>
+</section>
+
+<div class="brand-story-container">
+  <img src="img/매인4.png" alt="Brand Story Image" />
+  <div class="brand-story-text">BRAND STORY</div>
+</div>
+<footer class="footer">
+  <div class="footer-links">
+    <a href="#">서비스이용약관</a> |
+    <a href="#">개인정보처리방침</a> |
+    <a href="#">영상정보처리방침</a> |
+    <a href="#">뷰티포인트</a> |
+    <a href="#">사이트맵</a> |
+    <a href="#">LANGUAGE 한국/한국어</a>
+  </div>
+
+  <div class="footer-icons">
+  <a href="#"><img src="img/인스타.png" alt="Instagram"></a>
+  <a href="#"><img src="img/티톡.png" alt="TikTok"></a>
+  <a href="#"><img src="img/이상한거.png" alt="YouTube"></a>
+  <a href="#"><img src="img/페북.png" alt="Chat"></a>
+  <a href="#"><img src="img/유튜브.png" alt="Facebook"></a>
+</div>
+
+
+  <div class="footer-info">
+    고객상담팀(수신자요금부담) 080-023-5454  
+    <span class="time">상담시간 월~금 : AM 9:00 ~ PM 6:00</span>
+  </div>
+</footer>
+
+</body>
+</html>
